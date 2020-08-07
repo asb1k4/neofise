@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+nav {
+  background: white;
+  height: 100px;
+  width: 100%;
+}
+label.logo {
+  padding-left: 200px;
+  line-height: 80px;
+}
+.logotip {
+  margin: 5px 0 0 0;
+  width: 200px;
+  height: 85px;
+}
+nav ul {
+  float: right;
+  margin-right: 60px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 2px;
+}
+nav ul li a {
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+a.active:hover {
+  background: #fdc12f;
+}
+a.req {
+  background: #fdc12f;
+  border-radius: 10px;
+  padding: 20px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+}
+a.req:hover {
+  background: #222d46;
+  color: white;
+}
+/* .toggle {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 100px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+} */
+input {
+  display: none;
+}
+
+/* конпка меню */
+
+:root {
+  --animation-curve: cubic-bezier(1, 0, 0, 1);
+}
+label.checkbtn {
+  display: none;
+  float: right;
+  line-height: 100px;
+  margin-top: 40px;
+  margin-right: 40px;
+  width: 48px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: black;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+label.checkbtn::before,
+label.checkbtn::after {
+  content: " ";
+  float: right;
+  line-height: 100px;
+  margin-right: 40px;
+  width: 48px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: black;
+  position: absolute;
+  display: block;
+  transition: 0.5s var(--animation-curve);
+}
+label.checkbtn::before {
+  top: 15px;
+  left: 0%;
+  transform-origin: right bottom;
+  transform: rotatez(0deg);
+}
+label.checkbtn::after {
+  bottom: 15px;
+  left: 0%;
+  transform-origin: right top;
+  transform: rotatez(0deg);
+}
+#toggle:checked ~ label.checkbtn::before {
+  background-color: #fdc12f;
+  transform: rotatez(42deg);
+}
+#toggle:checked ~ label.checkbtn::after {
+  background-color: #fdc12f;
+  transform: rotatez(-42deg);
+}
+#toggle:checked ~ label.checkbtn {
+  background-color: white;
+}
+#toggle ~ label.checkbtn {
+  transition: 0.5s var(--animation-curve);
+}
+
+@media (max-width: 1190px) {
+  label.checkbtn {
+    display: block;
+  }
+  /* label.checkbtn{
+    display: block;
+  } */
+  /* менюшка */
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-right: 20%;
+  }
+  ul {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f2f1f0;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: black;
+  }
+  #toggle:checked ~ ul {
+    left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .logo{
+    background: url("img/logo/logo_img.svg") no-repeat;
+    height: 85px;
+    margin: 10px 0 0 30%;
+  }
+  .logotip{
+    visibility: hidden;
+  }
+}
