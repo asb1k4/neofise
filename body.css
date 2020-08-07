@@ -437,6 +437,7 @@ a.animated-button:visited:after {
   -o-transition: all 0.75s ease 0s;
   transition: all 0.75s ease 0s;
 }
+
 a.animated-button:link:hover,
 a.animated-button:visited:hover {
   color: #15262e;
