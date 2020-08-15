@@ -198,7 +198,7 @@ label.checkbtn::after {
   height: 100vh;
 }
 .slider__img2 {
-  background: rgba(255, 208, 1, 0.37);
+  background: rgba(1, 255, 56, 0.37);
   /* background: url("img/DESIGN.png") no-repeat; */
   background-size: cover;
   margin-left: auto;
@@ -207,7 +207,7 @@ label.checkbtn::after {
   height: 100vh;
 }
 .slider__img3 {
-  background: rgba(255, 208, 1, 0.37);
+  background: rgba(18, 1, 255, 0.37);
   /* background: url("img/texture.jpg") no-repeat; */
   background-size: cover;
   margin-left: auto;
@@ -376,7 +376,7 @@ label.checkbtn::after {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -388,17 +388,18 @@ label.checkbtn::after {
   align-items: center;
   text-align: center;
 }
-.services-text{
+.services-text {
   width: 250px;
   font-size: 18px;
   line-height: 25px;
   align-items: center;
   text-align: center;
   transition: 0.6s;
+  margin-left: auto;
+  margin-right: auto;
 }
 .services-grid a {
   color: #15262e;
-  
 }
 .services-grid a:hover {
   color: #fdc12f;
@@ -406,7 +407,7 @@ label.checkbtn::after {
 
 /* btn all services */
 
-/* a.animated-button:link,
+a.animated-button:link,
 a.animated-button:visited {
   position: relative;
   display: block;
@@ -426,7 +427,7 @@ a.animated-button:visited {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-} */
+}
 a.animated-button:link:after,
 a.animated-button:visited:after {
   content: "";
@@ -447,7 +448,7 @@ a.animated-button:link,
 a.animated-button:visited {
   position: relative;
   display: block;
-  margin: 90px auto ;
+  /* margin: 90px auto; */
   padding: 14px 15px;
   color: #15262e;
   font-size: 14px;
@@ -464,16 +465,16 @@ a.animated-button:visited {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-
 a.animated-button.thar-four {
   width: 250px;
+  margin-bottom: 30px;
   color: #15262e;
   cursor: pointer;
   display: block;
   position: relative;
   border: 2px solid #15262e;
   border-radius: 10px;
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.6s cubic-bezier(0.42, 0, 0.58, 1);
 }
 a.animated-button.thar-four:hover {
   color: #15262e !important;
@@ -493,17 +494,14 @@ a.animated-button.thar-four:before {
   left: 0px;
   height: 100%;
   width: 0px;
-  z-index: 30;
+  z-index: 2;
   content: "";
   color: #15262e !important;
   background: #fdc12f;
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.6s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 /* медиа запросы */
-@media (max-width:1330px){
-
-}
 
 @media (max-width: 1190px) {
   .header {
