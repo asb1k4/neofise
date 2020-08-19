@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neofice</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contacts.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="/index.html"><img src="/img/logo/logo.png" /></a>
+        </div>
+        <nav>
+          <input type="checkbox" id="toggle" />
+          <label for="toggle" class="checkbtn"></label>
+          <ul>
+            <li><a href="about-us.html" class="active">О нас</a></li>
+            <li><a href="services.html" class="active">Услуги</a></li>
+            <li><a href="#" class="active">Мобильное приложение</a></li>
+            <li><a href="/pages/contacts.html" class="active">Контакты</a></li>
+            <li><a href="#" class="req">Оставить заявку</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="contact">
+      <h1>КОНТАКТЫ</h1>
+      <div class="row">
+        <div class="address">
+          <img src="/img/Icons/mapicon.png" />
+          <p>Казахстан, г. Нурсултан, ул. Ж. Ташенова 23/1</p>
+        </div>
+        <div class="email">
+          <img src="/img/Icons/email.png" />
+          <p>tooneofis@mail.ru</p>
+        </div>
+        <div class="phone">
+          <img src="/img/Icons/phone.png" />
+          <p>+7 7172 28-65-83</p>
+        </div>
+      </div>
+      <form class="bond" autocomplete="off" action="email.php" method="post">
+        <div class="connection">
+          <div>
+            <label>Имя <span>*</span></label>
+            <input type="text" name="user_name" required />
+          </div>
+
+          <div>
+            <label>Email <span>*</span></label>
+            <input type="text" name="user_email" required />
+          </div>
+
+          <div>
+            <label>Сообщение</label>
+            <input class="message" type="text" name="question" />
+          </div>
+          <input class="send" type="submit" value="Отправить" />
+        </div>
+      </form>
+      <div class="map">
+        <script
+          type="text/javascript"
+          charset="utf-8"
+          async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ffe50177a79268f9411cfd237edaf765d83db566ec1176dad03384838b74c9e&amp;width=70%&amp;height=60vh&amp;lang=ru_RU&amp;scroll=true"
+        ></script>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>МЕНЮ</h3>
+            <li><a href="/pages/about-us.html">О нас</a></li>
+            <li><a href="/pages/services.html">Услуги</a></li>
+            <li><a href="#">Мобильное приложение</a></li>
+            <li><a href="/pages/contacts.html">Контакты</a></li>
+          </div>
+          <div class="footer-col-2">
+            <img src="/img/logo/logo_img.svg" />
+          </div>
+          <div class="footer-col-3">
+            <h3>КОНТАКТЫ</h3>
+            <li>
+              Казахстан, г. Нурсултан,<br />
+              ул. Ж. Ташенова 23/1
+            </li>
+            <li>+7 (7172) 28-65-83</li>
+            <li>tooneofis@mail.ru</li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
