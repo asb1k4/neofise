@@ -5,13 +5,14 @@
 }
 body {
   font-family: "Jost", sans-serif;
+  overflow-x: hidden;
 }
 .navbar {
   display: flex;
   align-items: center;
   padding: 10px;
 }
-.logo img {
+.main-logo {
   width: 200px;
 }
 nav {
@@ -33,19 +34,6 @@ nav ul li a {
 a.active:hover {
   border-bottom: 3px solid #222d46;
 }
-a.req {
-  background: #fdc12f;
-  border-radius: 10px;
-  padding: 15px 15px;
-  font-weight: 500;
-  cursor: pointer;
-  margin: 10px;
-  transition: 0.6s;
-}
-a.req:hover {
-  background: #222d46;
-  color: white;
-}
 a {
   text-decoration: none;
   color: #15262e;
@@ -60,7 +48,7 @@ p {
   padding-right: 25px;
   border-bottom: 2px solid #f2f1f0;
 }
-input {
+#toggle {
   display: none;
 }
 
@@ -121,6 +109,146 @@ label.checkbtn::after {
   transition: 0.5s var(--animation-curve);
 }
 
+/* submit btn */
+label.submitbtn {
+  background: #fdc12f;
+  border-radius: 10px;
+  padding: 15px 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  transition: 0.6s;
+  z-index: 100;
+}
+label.submitbtn:hover {
+  background: #222d46;
+  color: white;
+}
+.contact-form {
+  margin: 50px auto;
+  padding: 100px;
+  width: 350px;
+  text-align: center;
+}
+.contact-form input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.contact-form textarea {
+  width: 90%;
+  margin: 5px auto;
+  padding: 10px;
+  height: 80px;
+}
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+.input-container label {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  font-size: 16px;
+  color: #f0f1f2;
+  pointer-event: none;
+  transition: all 0.5s ease-in-out;
+}
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid #f0f1f2;
+  background: transparent;
+  width: 90%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #f0f1f2;
+}
+.input-container textarea {
+  border: 0;
+  border-bottom: 1px solid #f0f1f2;
+  background: transparent;
+  width: 90%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #f0f1f2;
+}
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -12px;
+  font-size: 12px;
+}
+.input-container textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+.input-container textarea:focus ~ label,
+.input-container textarea:valid ~ label {
+  top: -12px;
+  font-size: 12px;
+}
+.submit-btn {
+  cursor: pointer;
+  width: 180px !important;
+  margin-left: 50px !important;
+  border: 1px solid #f0f1f2;
+  border-radius: 10px;
+  background: #222d46;
+  color: #f0f1f2;
+  font-size: 14px;
+}
+.closebtn {
+  cursor: pointer;
+  width: 180px !important;
+  margin-left: 550px !important;
+  color: #f0f1f2;
+  font-size: 40px;
+}
+.g-recaptcha {
+  margin: 10px 10px;
+  float: center;
+}
+.status {
+  font-size: 14px;
+  color: white;
+  padding: 15px;
+}
+.status span {
+  color: red;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+#submit {
+  display: none;
+}
+#submit:checked ~ .contact-form {
+  right: 0;
+  display: block;
+  transition: all 0.5s;
+}
+.contact-form {
+  /* display: none; */
+  z-index: 20;
+  position: absolute;
+  width: 70%;
+  height: 50%;
+  background: #222d46;
+  right: -100%;
+  top: 66px;
+  text-align: center;
+  transition: all 0.5s;
+  border-radius: 0 0 0 30px;
+}
+
+
 .row {
   max-width: 1080;
   margin: auto;
@@ -162,62 +290,7 @@ label.checkbtn::after {
   margin-left: auto;
   margin-bottom: 10px;
 }
-/* contact form */
-.bond {
-  width: 100%;
-  max-width: 350px;
-  margin: auto;
-}
-.connection {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-.connection div {
-  padding: 15px 0;
-}
-.connection .message {
-  padding: 30px 0;
-}
-.send {
-  box-sizing: border-box;
-  width: 100%;
-}
-.connection label,
-.connection input {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-}
-.connection label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.connection input {
-  padding: 10px 15px;
-  margin-top: 10px;
-}
-.connection label span {
-  color: red;
-}
-.connection .send {
-  padding: 15px;
-  margin-top: 10px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  background-color: #fdc12f;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.5s;
-}
-.connection .send:hover {
-  color: #fff;
-  background-color: #222d46;
-}
+
 .map {
   margin-top: 70px;
   padding: 70px 0;
@@ -276,17 +349,23 @@ label.checkbtn::after {
 }
 
 /* media запросы */
-@media (max-width: 980px) {
+@media (max-width: 910px) {
   /* menu */
   label.checkbtn {
     display: block;
+  }
+  .contact-form {
+    display: none;
+  }
+  .submitbtn{
+    display: none;
   }
   ul {
     z-index: 15;
     position: absolute;
     width: 100%;
-    height: 87%;
-    background: #f2f1f0;
+    height: 85%;
+    background: #222d46;
     top: 115px;
     left: -100%;
     text-align: center;
@@ -300,10 +379,10 @@ label.checkbtn::after {
   nav ul li a {
     font-size: 20px;
   }
-  nav ul li a:hover,
+  nav ul li a:focus,
   a.active {
     background: none;
-    color: black;
+    color: white;
   }
   #toggle:checked ~ ul {
     left: 0;

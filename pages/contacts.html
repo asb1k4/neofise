@@ -14,7 +14,9 @@
     <div class="container">
       <div class="navbar">
         <div class="logo">
-          <a href="/index.html"><img src="/img/logo/logo.png" /></a>
+          <a href="/index.html">
+            <img src="/img/logo/logo.png" class="main-logo" />
+          </a>
         </div>
         <nav>
           <input type="checkbox" id="toggle" />
@@ -24,7 +26,34 @@
             <li><a href="services.html" class="active">Услуги</a></li>
             <li><a href="#" class="active">Мобильное приложение</a></li>
             <li><a href="/pages/contacts.html" class="active">Контакты</a></li>
-            <li><a href="#" class="req">Оставить заявку</a></li>
+            <input type="checkbox" id="submit" />
+            <label for="submit" class="submitbtn">Оставить заявку</label>
+            <div class="contact-form">
+              <form method="post" action="">
+                <div class="input-container">
+                  <input type="text" name="name" required />
+                  <label>Ваше Имя</label>
+                </div>
+                <div class="input-container">
+                  <input type="mail" name="email" required />
+                  <label>Ваш Email</label>
+                </div>
+                <div class="input-container">
+                  <textarea name="message" required></textarea>
+                  <label>Ваше сообщение</label>
+                </div>
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6Ld5ZsEZAAAAABPy5ssEQY7cB9m0k7hEqoCaUIxX"
+                ></div>
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Отправить сообщение"
+                  class="submit-btn"
+                />
+              </form>
+            </div>
           </ul>
         </nav>
       </div>
@@ -45,25 +74,6 @@
           <p>+7 7172 28-65-83</p>
         </div>
       </div>
-      <form class="bond" autocomplete="off" action="email.php" method="post">
-        <div class="connection">
-          <div>
-            <label>Имя <span>*</span></label>
-            <input type="text" name="user_name" required />
-          </div>
-
-          <div>
-            <label>Email <span>*</span></label>
-            <input type="text" name="user_email" required />
-          </div>
-
-          <div>
-            <label>Сообщение</label>
-            <input class="message" type="text" name="question" />
-          </div>
-          <input class="send" type="submit" value="Отправить" />
-        </div>
-      </form>
       <div class="map">
         <script
           type="text/javascript"
@@ -98,5 +108,7 @@
         </div>
       </div>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="/vg/www/templates/modules/mail/js/mail.js"></script>
   </body>
 </html>

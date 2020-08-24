@@ -23,8 +23,35 @@
             <li><a href="/pages/about-us.html" class="active">О нас</a></li>
             <li><a href="/pages/services.html" class="active">Услуги</a></li>
             <li><a href="#" class="active">Мобильное приложение</a></li>
-            <li><a href="#" class="active">Контакты</a></li>
-            <li><a href="#" class="req">Оставить заявку</a></li>
+            <li><a href="/pages/contacts.html" class="active">Контакты</a></li>
+            <input type="checkbox" id="submit" />
+            <label for="submit" class="submitbtn">Оставить заявку</label>
+            <div class="contact-form">
+              <form method="post" action="">
+                <div class="input-container">
+                  <input type="text" name="name" required />
+                  <label>Ваше Имя</label>
+                </div>
+                <div class="input-container">
+                  <input type="mail" name="email" required />
+                  <label>Ваш Email</label>
+                </div>
+                <div class="input-container">
+                  <textarea name="message" required></textarea>
+                  <label>Ваше сообщение</label>
+                </div>
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6Ld5ZsEZAAAAABPy5ssEQY7cB9m0k7hEqoCaUIxX"
+                ></div>
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Отправить сообщение"
+                  class="submit-btn"
+                />
+              </form>
+            </div>
           </ul>
         </nav>
       </div>
@@ -83,5 +110,7 @@
         </div>
       </div>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
   </body>
 </html>
